@@ -1,0 +1,3 @@
+add_lunch_combo XOS_hammerheadcaf-eng
+add_lunch_combo XOS_hammerheadcaf-userdebug
+add_lunch_combo XOS_hammerheadcaf-user

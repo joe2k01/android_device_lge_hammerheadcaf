@@ -1,11 +1,12 @@
 [
- {
-   "repository": "android_kernel_lge_hammerhead",
-   "branch": "cm-14.1-caf",
-   "target_path": "kernel/lge/hammerhead"
- },
- {
-   "repository": "android_packages_resources_devicesettings",
-   "target_path": "packages/resources/devicesettings"
- }
+  {
+   "repository" : "android_kernel_lge_hammerheadcaf",
+   "target_path": "kernel/lge/hammerheadcaf",
+   "branch": "XOS-7.1"
+  },
+  {
+    "repository": "android_vendor_lge_hammerheadcaf",
+    "target_path": "vendor/lge/hammerheadcaf",
+    "branch": "XOS-7.1"
+  }
 ]
