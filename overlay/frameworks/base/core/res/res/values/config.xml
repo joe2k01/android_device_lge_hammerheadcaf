@@ -116,7 +116,7 @@
 
     <!-- Is the battery LED intrusive?
          Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- <bool name="config_intrusiveBatteryLed">true</bool> -->
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">6</integer>
@@ -314,7 +314,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
+    <!-- <integer name="config_deviceHardwareWakeKeys">64</integer> -->
 
     <!-- Doze mode -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
@@ -329,6 +329,6 @@
     <string translatable="false" name="config_radio_access_family">GSM | WCDMA | LTE | CDMA | EVDO</string>
 
     <!-- Enable UI blur feature -->
-    <bool name="config_uiBlurEnabled">true</bool>
+    <!-- <bool name="config_uiBlurEnabled">true</bool> -->
 
 </resources>
