@@ -8,5 +8,10 @@
     "repository": "android_vendor_lge_hammerheadcaf",
     "target_path": "vendor/lge/hammerheadcaf",
     "branch": "XOS-7.1"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "cm-14.1"
   }
 ]
