@@ -103,13 +103,9 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 TARGET_NO_RPC := true
 
 # Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+# Dexpreopt only releases (halogenOS will autodo the stuff)
+TARGET_FORCE_DEXPREOPT ?= false
+WITH_DEXPREOPT := $(TARGET_FORCE_DEXPREOPT)
 DONT_DEXPREOPT_PREBUILTS := true
 
 # Partitions
