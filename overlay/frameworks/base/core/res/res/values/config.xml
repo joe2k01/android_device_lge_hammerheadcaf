@@ -331,4 +331,7 @@
     <!-- Enable UI blur feature -->
     <!-- <bool name="config_uiBlurEnabled">true</bool> -->
 
+    <!-- Determines if Navigation bar (Softkeys) are shown by default or na -->
+    <bool name="config_defaultToNavigationBar">true</bool>
+
 </resources>
