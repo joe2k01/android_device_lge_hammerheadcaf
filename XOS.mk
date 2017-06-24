@@ -38,3 +38,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=hammerhead \
     BUILD_FINGERPRINT=google/hammerhead/hammerhead:6.0.1/M4B30Z/3437181:user/release-keys \
     PRIVATE_BUILD_DESC="hammerhead-user 6.0.1 M4B30Z 3437181 release-keys"
+
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ota.romname=$(PRODUCT_NAME) \
+    persist.ota.version=$(shell date +%Y%m%d) \
+    persist.ota.manifest=https://raw.githubusercontent.com/halogenOS/android_extras_ota/XOS-7.1/$(PRODUCT_NAME).xml
