@@ -141,7 +141,7 @@ endif
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Legacy Sdcardfs (Look for commit in android_system_core/sdcard)
 TARGET_LEGACY_KERNEL_SDCARDFS := true
