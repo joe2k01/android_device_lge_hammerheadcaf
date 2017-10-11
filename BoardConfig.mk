@@ -127,7 +127,7 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := hammerhead,hammerheadcaf
 TARGET_RECOVERY_FSTAB = $(PLATFORM_PATH)/rootdir/etc/fstab.hammerhead
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_hammerhead
+# TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_hammerhead
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
