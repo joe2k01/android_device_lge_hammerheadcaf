@@ -288,34 +288,6 @@
         <item>"ehrpd:4094,87380,1048576,4096,16384,262144"</item>
     </string-array>
 
-    <!-- Hardware keys present on the device, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareKeys">64</integer>
-
-    <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <!-- <integer name="config_deviceHardwareWakeKeys">64</integer> -->
-
     <!-- Doze mode -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <integer name="config_screenBrightnessDoze">10</integer>
@@ -330,9 +302,6 @@
 
     <!-- Enable UI blur feature -->
     <!-- <bool name="config_uiBlurEnabled">true</bool> -->
-
-    <!-- Determines if Navigation bar (Softkeys) are shown by default or na -->
-    <bool name="config_defaultToNavigationBar">true</bool>
 
     <!-- Determines if device has support for Night Display or na -->
     <bool name="config_nightDisplayAvailable">true</bool>
