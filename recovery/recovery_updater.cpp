@@ -25,8 +25,10 @@
 #include <string.h>
 #include <unistd.h>
 
+#include <string>
+#include <vector>
+
 #include <edify/expr.h>
-#include <updater/include/updater/install.h>
 
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
@@ -151,10 +153,11 @@ err_ret:
 }
 
 /* verify_baseband("BASEBAND_VERSION", "BASEBAND_VERSION", ...) */
-Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[]) {
+Value * VerifyBasebandFn(const char *name, State *state,
+                     const std::vector<std::unique_ptr<Expr>>& argv) {
     char current_baseband_version[BASEBAND_VER_BUF_LEN];
     char *baseband_version;
-    int i, ret;
+    int ret;
 
     ret = get_baseband_version(current_baseband_version, BASEBAND_VER_BUF_LEN);
     if (ret) {
@@ -162,16 +165,15 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
                 name, ret);
     }
 
-    for (i = 1; i <= argc; i++) {
-        ret = ReadArgs(state, argv, i, &baseband_version);
+    std::vector<std::string> args;
+    for (auto& baseband_version : args) {
+        ret = ReadArgs(state, argv, &args);
         if (ret < 0) {
             return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments: %d",
                 name, ret);
         }
 
-        uiPrintf(state, "Comparing BASEBAND version %s to %s",
-                baseband_version, current_baseband_version);
-        if (strncmp(baseband_version, current_baseband_version, strlen(baseband_version)) == 0) {
+        if (strncmp(baseband_version.c_str(), current_baseband_version, strlen(baseband_version.c_str())) == 0) {
             return StringValue(strdup("1"));
         }
     }
