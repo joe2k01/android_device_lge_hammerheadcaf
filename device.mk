@@ -195,8 +195,8 @@ PRODUCT_PACKAGES += \
     ueventd.hammerhead.rc
 
 # Recovery
-#PRODUCT_PACKAGES += \
-#    librecovery_updater_hammerhead
+PRODUCT_PACKAGES += \
+    librecovery_updater_hammerhead
 
 # RIL
 PRODUCT_PACKAGES += \
